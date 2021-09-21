@@ -1,0 +1,329 @@
+
+/*Styling using Selector incorporating flex and grid layout*/
+
+.navbar-brand{
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+
+}
+
+#Contact .navbar-brand{
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+span > i
+{
+  margin-right: 20px;
+}
+
+a > i
+{
+  margin-right: 10px;
+}
+
+.nav-item > .nav-link
+{
+  font-size: 20px;
+}
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 100%;
+  width: auto;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel {
+  height: 400px;
+}
+
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.desc
+{
+  width:100%;
+  padding: 15px 15px;
+}
+
+#places
+{
+  background-color:#cdd0cb
+}
+
+.card > img
+{
+  height:200px;
+  width:auto;
+}
+
+#photo-gallery
+{
+  background-color: #fde8cd;
+  text-align: center;
+  padding: 40px;
+}
+
+#photo-gallery > h1 > span
+{
+  color: #70af85;
+}
+
+#photo-gallery > h1 + p
+{
+  color:#654062;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+
+
+
+#gallery {
+  display: grid;
+
+  grid-gap: 20px;
+  /* row-gap: 32px;
+  column-gap: 48px;*/
+
+  justify-content: space-around;
+
+}
+
+#gallery > div
+{
+  border:solid #c05555 5px;
+  border-radius: 20px;
+
+}
+
+#signUp
+{
+  background-color: #bedbbb;
+
+}
+
+#Contact div > p
+{
+  margin-bottom: 30px;
+}
+
+
+
+.fm
+{
+  margin-bottom: 40px;
+}
+
+.div1
+{
+
+
+  position: relative;
+  animation-name: example;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+
+}
+
+
+.div2
+{
+
+
+  position: relative;
+  animation-name: example2;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.div3
+{
+
+
+  position: relative;
+  animation-name: example3;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.div4
+{
+
+
+  position: relative;
+  animation-name: example4;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+
+
+/*Pseudo Element and classes*/
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+#gallery > div img:hover
+{
+  opacity: 0.5;
+}
+
+p::after {
+  content: "!";
+}
+
+ input:focus {
+  background-color:#f8d49d;
+  border: 3px solid #707070;
+}
+
+input:out-of-range {
+  background-color: #c75643;
+  placeholder="Age out of range"
+}
+
+.btn-rd:hover
+{
+   background-color: #ff8e71;
+}
+
+#btn-sub:hover
+{
+  background-color: #93abd3;
+}
+
+::selection {
+  color: white;
+  background:#ff8e71 ;
+}
+
+
+
+/*Media Query*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  #gallery
+  {
+    grid-template-columns: auto;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  #gallery
+  {
+    grid-template-columns: auto;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  #gallery
+  {
+    grid-template-columns: auto auto;
+  }
+}
+
+/* Large devices (laptops/desktops, 920px and up) */
+
+@media only screen and (max-width: 920px) {
+  .contact {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+}
+
+@media only screen and (min-width: 920px) {
+  .contact
+  {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 992px) {
+  #gallery
+  {
+    grid-template-columns: auto auto auto;
+  }
+}
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+      #gallery
+      {
+        grid-template-columns: auto auto auto auto;
+      }
+  }
+
+
+/*Animation*/
+
+        @keyframes example {
+
+      0%   {left:0px;}
+      50%  {left:350px;}
+      100%  {left:750px;}
+        }
+
+      @keyframes example3 {
+
+    0%   {left:0px;}
+    50%  {left:-350px;}
+    100%  {left:-750px;}
+      }
+
+      @keyframes example2 {
+
+    0%   {top:0px;}
+    50%  {top:350px;}
+    100%  {top:750px;}
+      }
+
+    @keyframes example4 {
+
+  0%   {top:0px;}
+  50%  {top:-350px;}
+  100%  {top:-750px;}
+    }
+
+}

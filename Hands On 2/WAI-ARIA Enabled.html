@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <script>
+      function changeContent() {
+        document.querySelector(".live-change").textContent = "Congrats!You, have successfully signedUp.";
+      }
+    </script>
+
+   <style media="screen">
+
+
+  h2
+  {
+    text-align:center;
+  }
+
+   header
+   {
+     text-align:center;
+     padding:10px;
+     background-color:#f6c065;
+   }
+
+   article
+   {
+     text-align:center;
+     padding:10px;
+     background-color:#cdfffc;
+   }
+
+   nav
+   {
+     text-align:center;
+     padding:10px;
+     background-color:#f6d887;
+   }
+
+   aside
+   {
+   width: 30%;
+   padding-left: 15px;
+   margin: 15px;
+   float: right;
+   font-style: italic;
+   background-color: lightgray;
+  }
+
+  footer
+  {
+  text-align:center;
+  padding:10px;
+  background-color:#ffa36c;
+ }
+
+ a
+ {
+   margin-left: 15px;
+   margin-right: 15px;
+ }
+   #aside
+   {
+     background-color:#ffabe1;
+     padding: 10px;
+
+   }
+
+   #sec
+   {
+     background-color:#adce74;
+   }
+
+
+   #signUp
+   {
+     border: 5px solid black;
+     text-align: center;
+     padding: 10px;
+   }
+
+   </style>
+
+
+
+    <title>WAI-ARIA</title>
+  </head>
+  <body>
+
+    <section id="header">
+      <header role="header of the page" tabindex="1" aria-label="Monuments in India">
+        <h1 >Monuments in India</h1>
+        <img src="tajlogo.jfif" alt="">
+      </header>
+    </section>
+
+
+    <section id="nav">
+       <nav role="navigation" aria-label="famous monuments of India" tabindex="3">
+         <h2 >Navigation Link to famous monuments of India</h2>
+
+
+              <a tabindex="4" href="https://en.wikipedia.org/wiki/Taj_Mahal" target="_blank">Taj Mahal</a>
+              <a tabindex="5" href="https://en.wikipedia.org/wiki/Qutb_Minar" target="_blank">Qutb_Minar</a>
+              <a tabindex="6" href="https://en.wikipedia.org/wiki/Red_Fort" target="_blank">Red_Fort</a>
+              <a tabindex="7" href="https://en.wikipedia.org/wiki/Khajuraho_Group_of_Monuments" target="_blank">Khajuraho_Group_of_Monuments</a>
+              <a tabindex="8" href="https://en.wikipedia.org/wiki/Ajanta_Caves" target="_blank">Ajanta_Caves</a>
+              <a tabindex="9" href="https://en.wikipedia.org/wiki/Sanchi" target="_blank">Sanchi Stupa</a>
+
+       </nav>
+    </section>
+
+
+    <section id="article">
+
+     <article role="article" tabindex="2" aria-label="Majestic monuments of India">
+       <h2 >Article on Majestic monuments of India</h2>
+       <p>India is one of the most beautiful countries in the world and is best known for its colourful culture and fascinating heritage.<br>
+          Its grand monuments, like the Taj Mahal act as strong pillars of the rich and deep history that India possesses.<br>
+          From their splendid architecture to a strong legacy, the historical monuments of India speak volumes.<br>
+          Most of these Indian monuments were primarily built under the regime of Rajputana, Dravidian and Mughal emperors.<br>
+       </p>
+     </article>
+
+    </section>
+
+
+
+
+
+<section id="aside">
+
+
+<h2 >The aside element</h2>
+
+
+
+<aside role="complementary" tabindex="10" aria-label="this is a aside tag">
+<p>India’s most visited monuments are spread across the country, built by emperors, the government and, in some cases, religious institutions.</p>
+</aside>
+
+<p>In 1972, the General Conference of UNESCO adopted a resolution with overwhelming enthusiasm creating thereby a ‘Convention concerning the protection of the World Cultural and Natural Heritage’. The main objectives were to define the World Heritage in both cultural and natural aspects; to enlist Sites and Monuments from the member countries which are of exceptional interest and universal value, the protection of which is the concern of all mankind; and to promote co-operation among all Nations and people to contribute for the protection of these universal treasures intact for future generations.The List of recorded sites on the World Heritage now stands at 981 which include both cultural and natural wonders, and endowment that is shared by all mankind and the protection of which is the concern of the entire mankind. These include 759 cultural, 193 natural and 29 mixed properties in 137 state parties.
+</section>
+
+
+    <section id="sec">
+        <h2> Sections of the page</h2>
+      <nav>
+
+        <a href="#header">Header</a><br>
+        <a href="#article">Article</a><br>
+        <a href="#nav">Nav</a><br>
+        <a href="#aside">Aside</a><br>
+        <a href="#sec">Sections</a><br>
+        <a href="#footer">Footer</a><br>
+      </nav>
+    </section>
+
+    <section id="signUp" aria-live="assertive" aria-atomic="true">
+      <h2 tabindex="12" class="live-change">SignUp for a Vacation in India</h2>
+      <form class="" role="form" action="index.html" method="post" aria-label="This is a SignUp Form to register for a vacation in India">
+        <label for="fname">First name:</label>
+        <input tabindex="13" type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input tabindex="14" type="text" id="lname" name="lname"><br><br>
+        <label for="phone">TelePhone:</label>
+        <input tabindex="15" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+        <button tabindex="16" type="button" name="button" onclick="changeContent()">SignUp</button>
+      </form>
+    </section>
+
+
+    <section id="footer">
+      <footer>
+         <h2 tabindex="11">Contact</h2>
+         <span>Email:</span><a href="">info@india-tourism.com</a><br><br>
+         <span>Tel: 91-69-24294927</span><br><br>
+         <span>Office: Room No.119, Transport Bhawan, 1, Parliament Street,New Delhi - 110 001 </span>
+      </footer>
+    </section>
+
+  </body>
+</html>

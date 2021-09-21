@@ -1,0 +1,3 @@
+All CSS realted changes has been added to the page using style.css. 
+Page can be accessed using index.html
+Last task(Transition) can be accessed using transition.html.
